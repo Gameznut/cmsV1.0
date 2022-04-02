@@ -1,6 +1,5 @@
 <template>
   <Tutorial />
-  s
 </template>
 
 <script>
