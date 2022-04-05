@@ -25,7 +25,7 @@
     display: block;
   }
 
-  /* @media screen and (max-width: 320px) {
+  @media screen and (max-width: 320px) {
     .layout {
       flex-direction: column;
       margin: 0 1rem 0 0;
@@ -45,7 +45,7 @@
         padding-bottom: 1.3rem;
         font-size: 20px;
     }
-  } */
+  }
 
   @media screen and (max-width: 576px) {
     .layout {
