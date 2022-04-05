@@ -89,7 +89,7 @@ export default {}
   transform: translateX(5px);
 }
 
-@media screen and (max-width: 320px) {
+/* @media screen and (max-width: 320px) {
   .layout {
     flex-direction: column;
   }
@@ -102,7 +102,7 @@ export default {}
   .description {
     font-size: 25px;
   }
-}
+} */
 
 @media screen and (max-width: 576px) {
   .layout {

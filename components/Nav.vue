@@ -57,14 +57,5 @@ if (process.browser) {
 .scroll-nav{
   opacity: .0;
 }
-/* @media screen and (max-width: 576px) {
-  .nav {
 
-      position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  }
-} */
 </style>
