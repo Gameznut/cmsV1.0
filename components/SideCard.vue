@@ -9,10 +9,11 @@
       <div>
         <nuxt-link to="/_id" class="side_card_more">
           <h1 class="side_card_title">Lorem ipsum dolor</h1>
+          <client-only>
           <font-awesome-icon
             icon="fa-solid fa-angles-right"
             class="side_card_arrow"
-          />
+          /></client-only>
         </nuxt-link>
       </div>
 

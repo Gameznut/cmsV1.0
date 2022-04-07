@@ -20,10 +20,13 @@
             "
           >
             <h1 class="text-[30px] font-black card_title">Lorem ipsum</h1>
-            <font-awesome-icon
+            <client-only>
+             <font-awesome-icon
               icon="fa-solid fa-angles-right"
               class="card_arrow"
-            />
+            /> 
+            </client-only>
+            
           </nuxt-link>
         </div>
 

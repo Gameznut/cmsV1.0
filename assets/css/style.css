@@ -57,6 +57,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: .3s; /* For animation dark mode */
+  
 }
 
 h1, h2, h3 {
