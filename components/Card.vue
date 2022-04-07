@@ -1,20 +1,17 @@
 <template>
-  <div class="card_content">
-    <img
-      class="h-[22rem] w-[100%] object-cover"
-      src="../assets/images/food.jpg"
-      alt=""
-    />
+  <div class="card_layout">
+    <div class="card_img">
+      <img src="../assets/images/food.jpg" alt="" />
+    </div>
+
     <div class="bg-[#f5f3f700]">
-      <div class="flex flex-col">
-        <small class="py-[1.3rem] block"
-          >Emmanuel Apabiekun - 04 jan 2022
-        </small>
+      <div class="card_content">
+        <small class="lock card_small">Emmanuel Apabiekun - 04 jan 2022 </small>
         <div>
           <nuxt-link
             to="/_id"
             class="
-              more
+              card_more
               justify-between
               items-baseline
               flex
@@ -22,53 +19,23 @@
               rounded-xl
             "
           >
-            <h1 class="text-[30px] font-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Provident.
-            </h1>
-            <font-awesome-icon icon="fa-solid fa-angles-right" class="arrow" />
+            <h1 class="text-[30px] font-black card_title">Lorem ipsum</h1>
+            <font-awesome-icon
+              icon="fa-solid fa-angles-right"
+              class="card_arrow"
+            />
           </nuxt-link>
         </div>
 
-        <h2 class="test-[20px] text-[#adabab] my-[30px] description">
+        <h2 class="card_description">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis,
           quis minima perspiciatis tenetur sint culpa?
         </h2>
 
-        <div>
-          <span
-            class="
-              px-[.5rem]
-              font-black
-              bg-[#4df3f37c]
-              py-[.3rem]
-              rounded-lg
-              text-[#ff8800]
-            "
-            >Design</span
-          >
-          <span
-            class="
-              px-[.5rem]
-              font-black
-              bg-[#28d68596]
-              py-[.3rem]
-              rounded-lg
-              text-[#c300ff]
-            "
-            >Research</span
-          >
-          <span
-            class="
-              px-[.5rem]
-              font-black
-              bg-green-500
-              py-[.3rem]
-              rounded-lg
-              text-[yellow]
-            "
-            >Presentation</span
-          >
+        <div class="card_tags">
+          <span class="text-[#ff8800]">Design</span>
+          <span class="text-[#c300ff]">Research</span>
+          <span class="text-[yellow]">Presentation</span>
         </div>
       </div>
     </div>
@@ -80,57 +47,69 @@ export default {}
 </script>
 
 <style scoped>
-.arrow {
+.card_layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card_arrow {
   transition: 0.4s;
   transform: translateX(0px);
 }
 
-.more:hover .arrow {
+.card_more:hover .card_arrow {
   transform: translateX(5px);
 }
 
-@media screen and (max-width: 320px) {
-  .layout {
-    flex-direction: column;
-  }
-  .card_content {
-    margin: 0 1rem 0 0;
-  }
-  small {
-    font-size: 20px;
-  }
-  .description {
-    font-size: 25px;
-  }
+.card_description {
+  font-size: 17px;
+}
+
+.card_img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.card_tags {
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (max-width: 576px) {
-  .layout {
-    flex-direction: column;
+  .card_layout {
+    margin: 0 10px 0 0;
   }
-  .card_content {
-    margin: 0 1rem 0 0;
-  }
-  small {
+  .card_small {
     font-size: 20px;
   }
-  .description {
+  .card_description {
     font-size: 25px;
   }
 }
 
-/* @media screen and (min-width: 776px) {
-  .layout {
-    flex-direction: column;
+@media screen and (min-width: 776px) and (max-width: 912px) {
+  .card_img img {
+    width: 100%;
+    height: 250px;
   }
-  .card_content {
-    margin: 0 1rem 0 0;
+  
+  .card_description{
+      font-size: 12px;
+
   }
-  small {
+}
+
+@media screen and (min-width: 912px) {
+  .card_small {
     font-size: 20px;
   }
-  .description {
+  .card_title {
     font-size: 25px;
   }
-} */
+}
 </style>

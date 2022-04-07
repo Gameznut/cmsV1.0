@@ -1,155 +1,90 @@
- .recent_content {
-     height: 44rem;
- }
-
- .heading {
+ .recent_heading {
      text-align: left;
-     margin: 2rem 0;
+     position: absolute;
+     top: 0;
+     background-color: gold;
+     padding: .5rem;
+     border-bottom-right-radius: 20px;
+ }
+ .recent_content {
+    margin: 0 ;
+}
+ .recent_layout {
+     display: grid;
+     gap: 1.5rem;
  }
 
- .layout {
-     display: flex;
- }
-
- .layout>.card {
+ .recent_layout>.card {
      width: 60rem;
      margin: 0 3rem 0 0;
  }
 
- .layout .sidecard {
+ .recent_layout .sidecard {
      display: flex;
      flex-direction: column;
  }
 
- .layout .test:nth-child(2) {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
+ .recent_layout .test:nth-child(2) {
+     margin-top: 1rem;
+     margin-bottom: 1rem;
+ }
 
 
- @media screen and (max-width: 320px) {
+ @media screen and (max-width: 576px) {
      .recent_content {
-         margin: 0 1rem;
+         margin: 0 10px;
      }
 
-     .layout {
-         flex-direction: column;
+     .recent_layout {
+         gap: 1.5rem;
      }
 
-     .heading {
-         text-align: left;
-         margin: 2rem 0;
-         font-size: 30px;
-         font-weight: 600;
-     }
-
-     .layout>.card {
+     .recent_layout>.recent_card {
          width: 50rem;
          margin-bottom: 3rem;
      }
 
-     .layout .sidecard {
+     .recent_layout .recent_sidecard {
          width: 50rem;
          flex-direction: column;
      }
 
-     .layout .test:nth-child(2) {
+     .recent_layout .test:nth-child(2) {
          margin-top: 3rem;
          margin-bottom: 3rem;
      }
  }
 
+
+
  /* For medium devices */
-@media screen and (max-width: 576px) {
-    .recent_content {
-        margin: 0 1rem;
-    }
+ @media screen and (min-width: 576px) and (max-width: 776px) {
 
-    .layout {
-        flex-direction: column;
-    }
+     .recent_layout {
+         grid-template-columns: 1fr;
+     }
+ }
 
-    .heading {
-        text-align: left;
-        margin: 2rem 0;
-        font-size: 30px;
-        font-weight: 600;
-        max-width: 100%;
-    }
+ @media screen and (min-width: 776px) and (max-width: 912px) {
+     .recent_layout {
+         grid-template-columns: repeat(2, 1fr);
+     }
 
-    .layout>.card {
-        width: 50rem;
-        margin-bottom: 3rem;
-    }
+     .recent_content {
+         margin: 0 10px;
+     }
 
-    .layout .sidecard {
-        width: 50rem;
-        flex-direction: column;
-    }
+     .recent_layout .test:nth-child(2) {
+         display: none;
+     }
+ }
 
-    .layout .test:nth-child(2) {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+ /* For large devices */
+ @media screen and (min-width: 912px) {
+     .recent_content {
+         margin: 0 10px;
+     }
+     .recent_layout {
+        grid-template-columns: repeat(2, 1fr);
     }
-  }
-  
-  @media screen and (min-width: 776px) {
-    .recent_content {
-        height: 44rem;
-    }
-   
-    .heading {
-        text-align: left;
-        margin: 2rem 0;
-    }
-   
-    .layout {
-        display: flex;
-    }
-   
-    .layout>.card {
-        width: 60rem;
-        margin: 0 3rem 0 0;
-    }
-   
-    .layout .sidecard {
-        display: flex;
-        flex-direction: column;
-    }
-   
-    .layout .test:nth-child(2) {
-       margin-top: 3rem;
-       margin-bottom: 3rem;
-   }
-  }
-  
-  /* For large devices */
-  @media screen and (min-width: 992px) {
-    .recent_content {
-        height: 44rem;
-    }
-   
-    .heading {
-        text-align: left;
-        margin: 2rem 0;
-    }
-   
-    .layout {
-        display: flex;
-    }
-   
-    .layout>.card {
-        width: 60rem;
-        margin: 0 3rem 0 0;
-    }
-   
-    .layout .sidecard {
-        display: flex;
-        flex-direction: column;
-    }
-   
-    .layout .test:nth-child(2) {
-       margin-top: 3rem;
-       margin-bottom: 3rem;
-   }
-  }
+ }

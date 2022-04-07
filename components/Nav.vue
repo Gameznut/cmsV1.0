@@ -2,6 +2,7 @@
   <nav id="nav" class="p-[10px] nav text-[20px] text-[#e9e968] bg-[#1e1e3d]">
     <div class="container flex items-center justify-between">
       <nuxt-link class="text-[30px]" to="/">Foosion</nuxt-link>
+
       <div class="text-[#eedee1]" id="navbarResponsive">
         <ul class="flex">
           <li class="nav-item">
@@ -12,7 +13,9 @@
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/logout"
-              ><font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" />
+              >
+              <!-- <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /> -->
+
               Logout</nuxt-link
             >
           </li>
@@ -30,15 +33,15 @@
     
 <script setup>
 function scrollheader() {
-  const nav = document.getElementById("nav");
+  const nav = document.getElementById('nav')
   if (scrollY >= 50) {
-    nav.classList.add("scroll-nav");
+    nav.classList.add('scroll-nav')
   } else {
-    nav.classList.remove("scroll-nav");
+    nav.classList.remove('scroll-nav')
   }
 }
 if (process.browser) {
-   window.addEventListener("scroll", scrollheader);
+  window.addEventListener('scroll', scrollheader)
 }
 </script>
 
@@ -52,10 +55,16 @@ if (process.browser) {
   right: 0;
   left: 0;
   z-index: 1030;
-  transition: .4s;
+  transition: 0.4s;
 }
-.scroll-nav{
-  opacity: .0;
+.scroll-nav {
+  opacity: 0;
 }
 
+@media screen and (min-width: 576px) and (max-width: 776px) {
+  .nav-item {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+}
 </style>
