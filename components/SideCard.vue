@@ -1,14 +1,14 @@
 <template>
-  <div class="side_card_layout">
+  <div class="side_card_layout grid">
     <div class="side_card_img">
       <img class="" src="../assets/images/food.jpg" alt="" />
     </div>
 
-    <div class="side_card_layout_content">
+    <div class="side_card_layout_content flex flex-col">
       <small class="side_card_small">Emmanuel Apabiekun - 04 jan 2022 </small>
       <div>
-        <nuxt-link to="/_id" class="side_card_more">
-          <h1 class="side_card_title">Lorem ipsum dolor</h1>
+        <nuxt-link to="/_id" class="side_card_more flex">
+          <h1 class="side_card_title ca">Lorem ipsum dolor</h1>
           <client-only>
           <font-awesome-icon
             icon="fa-solid fa-angles-right"

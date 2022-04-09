@@ -1,13 +1,12 @@
-<!-- Please remove this file from your project -->
 <template>
-  <div class="recent_content relative">
+  <div class="recent_content relative ">
     <client-only>
-    <h1 class="recent_heading"><font-awesome-icon icon="fa-solid fa-star" class="text-[#538eb1]" />Recent Blog</h1></client-only>
-    <div class="recent_layout">
+    <small class="recent_heading flex"><font-awesome-icon icon="fa-solid fa-star" class="text-[#538eb1]" />Recent Blog</small></client-only>
+    <div class="recent_layout grid">
       <div class="recent_card">
         <Card />
       </div>
-      <div class="recent_sidecard">
+      <div class="recent_sidecard flex flex-col">
         <SideCard class="test" />
         <SideCard class="test" />
       </div>

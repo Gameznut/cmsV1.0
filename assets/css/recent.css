@@ -1,90 +1,23 @@
- .recent_heading {
-     text-align: left;
-     position: absolute;
-     top: 0;
-     background-color: gold;
-     padding: .5rem;
-     border-bottom-right-radius: 20px;
- }
- .recent_content {
-    margin: 0 ;
+.recent_layout {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
 }
- .recent_layout {
-     display: grid;
-     gap: 1.5rem;
- }
 
- .recent_layout>.card {
-     width: 60rem;
-     margin: 0 3rem 0 0;
- }
+.recent_heading {
+    position: absolute;
+    top: 0;
+    z-index: 30;
+    background-color: rgb(233, 212, 21);
+    border-bottom-right-radius: 30px;
+    padding: 10px;
+    align-items: center;
+    gap: .3rem;
+    font-size: 19px;
+    color: black;
+}
 
- .recent_layout .sidecard {
-     display: flex;
-     flex-direction: column;
- }
-
- .recent_layout .test:nth-child(2) {
-     margin-top: 1rem;
-     margin-bottom: 1rem;
- }
-
-
- @media screen and (max-width: 576px) {
-     .recent_content {
-         margin: 0 10px;
-     }
-
-     .recent_layout {
-         gap: 1.5rem;
-     }
-
-     .recent_layout>.recent_card {
-         width: 50rem;
-         margin-bottom: 3rem;
-     }
-
-     .recent_layout .recent_sidecard {
-         width: 50rem;
-         flex-direction: column;
-     }
-
-     .recent_layout .test:nth-child(2) {
-         margin-top: 3rem;
-         margin-bottom: 3rem;
-     }
- }
-
-
-
- /* For medium devices */
- @media screen and (min-width: 576px) and (max-width: 776px) {
-
-     .recent_layout {
-         grid-template-columns: 1fr;
-     }
- }
-
- @media screen and (min-width: 776px) and (max-width: 912px) {
-     .recent_layout {
-         grid-template-columns: repeat(2, 1fr);
-     }
-
-     .recent_content {
-         margin: 0 10px;
-     }
-
-     .recent_layout .test:nth-child(2) {
-         display: none;
-     }
- }
-
- /* For large devices */
- @media screen and (min-width: 912px) {
-     .recent_content {
-         margin: 0 10px;
-     }
-     .recent_layout {
-        grid-template-columns: repeat(2, 1fr);
+@media only screen and (max-width:990px) {
+    .recent_layout {
+        grid-template-columns: 1fr;
     }
- }
+}
